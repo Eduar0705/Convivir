@@ -30,43 +30,43 @@
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="./user_admin.html">
                             <i class="fas fa-users"></i>
                             <span>Usuarios</span>
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="./pagos.html">
                             <i class="fas fa-money-bill-wave"></i>
                             <span>Pagos</span>
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="./estadisticas.html">
                             <i class="fas fa-chart-bar"></i>
                             <span>Estadísticas</span>
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="./proveedores.html">
                             <i class="fas fa-truck"></i>
                             <span>Proveedores</span>
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="./avisos.html">
                             <i class="fas fa-bullhorn"></i>
                             <span>Avisos</span>
                         </a>
                     </li>
                     <li>
-                        <a href="./registro.php">
+                        <a href="./registro.html">
                             <i class="fas fa-user-plus"></i>
                             <span>Afiliarte</span>
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="./configuracion.html">
                             <i class="fas fa-cog"></i>
                             <span>Configuraciones</span>
                         </a>
@@ -87,7 +87,7 @@
                     <button class="menu-toggle" aria-label="Mostrar menú">
                         <i class="fas fa-bars"></i>
                     </button>
-                    <h1>Bienvenido al Panel</h1>
+                    <h1>Registro <i class="fa fa-user-plus"></i></h1>
                 </div>
                 <div class="navbar-right">
                     <div class="user-profile">
@@ -105,8 +105,6 @@
                         <p>Registro</p>
                     </div>
                     
-                    <?php include ('../model/fun_registro.php'); ?>
-                    
                     <input type="text" name="nombre" id="nombre" placeholder="Nombre">
                     <input type="text" name="username" id="username" placeholder="Usuario">
                     <input type="text" name="CI" id="CI" placeholder="Cedula">
@@ -119,7 +117,7 @@
                     <input type="text" name="telefono" id="telefono" placeholder="Teléfono">
                     <input type="text" name="apartamento" id="apartamento" placeholder="Apartamento">
                     <input type="password" name="password" id="password" placeholder="Contraseña">
-                    <input type="submit" value="Registar" name="registar">
+                    <button id="regis">Registrar</button>
                 </form>
             </main>
             
@@ -128,16 +126,8 @@
             </footer>
         </div>
     </div>
-    
     <script src="../js/script.js"></script>
-    <script>
-        //VALIDAR QUE EN TELEFONO SOLO SE INGRESEN NUMEROS
-        document.getElementById('telefono').addEventListener('input', function (e) {
-            this.value = this.value.replace(/[^0-9]/g, '');
-        });
-        document.getElementById('CI').addEventListener('input', function (e) {
-            this.value = this.value.replace(/[^0-9]/g, '');
-        });
-    </script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="../js/regis_verif.js"></script>
 </body>
 </html>

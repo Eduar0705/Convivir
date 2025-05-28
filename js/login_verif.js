@@ -9,7 +9,6 @@ boton.addEventListener('click', function(event) {
     const claveValor = clave.value.trim();
 
     if (usuarioValor === '' || claveValor === '') {
-        // Reemplazo de alert() por SweetAlert2
         Swal.fire({
             icon: 'error',
             title: 'ERROR',
@@ -25,7 +24,7 @@ boton.addEventListener('click', function(event) {
             title: '¡Bienvenido Admin!',
             text: 'Redirigiendo...',
             showConfirmButton: false,
-            timer: 1500 // Cierra automáticamente después de 1.5 segundos
+            timer: 2000 // Cierra automáticamente después de 2 segundos
         }).then(() => {
             window.location.href = './views/Admin.html';
         });
@@ -38,7 +37,7 @@ boton.addEventListener('click', function(event) {
             title: '¡Bienvenido Usuario!',
             text: 'Redirigiendo...',
             showConfirmButton: false,
-            timer: 1500
+            timer: 2000 // Cierra automáticamente después de 2 segundos
         }).then(() => {
             window.location.href = './views/Users.html';
         });
